@@ -1,0 +1,37 @@
+# Pinned for Intel Mac (x86_64), macOS 12.7, Python 3.11
+# PyTorch stopped publishing pip wheels for Intel Mac after 2.2.2 — do not bump this.
+torch==2.2.2
+
+# Embeddings + reranking (CPU-only, works fine on Intel Mac)
+sentence-transformers==3.0.1
+
+# Retrieval
+rank-bm25==0.2.2
+chromadb==0.5.5
+
+# Agent orchestration
+langgraph==0.2.28
+langchain==0.3.1
+langchain-openai==0.2.1
+langchain-community==0.3.1
+
+# LLM client (use whichever provider you choose)
+openai==1.51.0
+
+# Structured output
+pydantic==2.9.2
+
+# Evaluation
+ragas==0.2.3
+datasets==3.0.1
+
+# API + serving
+fastapi==0.115.0
+uvicorn[standard]==0.31.0
+
+# Frontend (if using Streamlit route)
+streamlit==1.39.0
+
+# Utilities
+python-dotenv==1.0.1
+requests==2.32.3

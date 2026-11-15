@@ -1,0 +1,26 @@
+services:
+  backend:
+    build: .
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+    environment:
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
+      GOOGLE_CHAT_MODEL: ${GOOGLE_CHAT_MODEL:-gemini-3.6-flash}
+      RAG_GRADE_MODEL: ${RAG_GRADE_MODEL:-gpt-4o-mini}
+      RAG_GENERATE_MODEL: ${RAG_GENERATE_MODEL:-gpt-4o-mini}
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  frontend:
+    build: .
+    command: streamlit run frontend/app.py --server.address 0.0.0.0 --server.port 8501
+    environment:
+      RAG_API_URL: http://backend:8000/query
+      RAG_SESSION_QUESTION_LIMIT: ${RAG_SESSION_QUESTION_LIMIT:-10}
+    depends_on:
+      - backend
+    ports:
+      - "8501:8501"
+    restart: unless-stopped

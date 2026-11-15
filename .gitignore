@@ -1,0 +1,28 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+*.env
+*.key
+
+# Generated corpus
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Downloaded model caches (models are fetched during Docker builds)
+.cache/
+.huggingface/
+models/
+model_cache/
+
+# Keep the small, built runtime index in the repository; omit local logs.
+data/index/*.log
+data/.embed_progress.json
+
+# Local model caches
+.cache/
+.huggingface/

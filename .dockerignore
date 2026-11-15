@@ -1,0 +1,11 @@
+.git
+.env
+venv
+__pycache__
+*.py[cod]
+data/raw
+data/processed
+eval
+*.jsonl
+*.log
+requirements 2.txt

@@ -1,0 +1,17 @@
+RAGAS is tool that check your understnading of your RAG system 
+
+It checks three things:
+
+Metric	Simple meaning
+Faithfulness :	Did AI make up anything, or did it answer using the documents?
+Context precision: Did the system retrieve useful document passages instead of irrelevant ones?
+Context recall : 	Did the system find all the important information needed to answer?
+
+So Ragas is working on 3 metrices and we have total 50 question out of which 40 are answerable means answer are present 
+in the document and remaning 10 dont have answer on the document 
+so therfore in total 40*3=120 so ragas should perform 120 individual check 
+
+If it dont get required document for a question so it will retrive the document again for getting 
+answer for the specific question this is called the : RETRY 
+
+so 10 hard question have retry count of 0.200

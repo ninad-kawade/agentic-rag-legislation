@@ -1,0 +1,9 @@
+# CI evaluation is deferred until Phase 7.
+name: evaluation
+on:
+  workflow_dispatch:
+jobs:
+  placeholder:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Evaluation workflow will be implemented in Phase 7"
