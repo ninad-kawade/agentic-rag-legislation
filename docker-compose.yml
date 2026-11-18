@@ -6,6 +6,7 @@ services:
       GOOGLE_API_KEY: ${GOOGLE_API_KEY:-}
       OPENAI_API_KEY: ${OPENAI_API_KEY:-}
       GROQ_API_KEY: ${GROQ_API_KEY:-}
+      GROQ_MODEL: ${GROQ_MODEL:-openai/gpt-oss-120b}
       GOOGLE_CHAT_MODEL: ${GOOGLE_CHAT_MODEL:-gemini-3.6-flash}
       RAG_GRADE_MODEL: ${RAG_GRADE_MODEL:-gpt-4o-mini}
       RAG_GENERATE_MODEL: ${RAG_GENERATE_MODEL:-gpt-4o-mini}
